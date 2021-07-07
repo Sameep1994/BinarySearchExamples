@@ -4,7 +4,8 @@ public class RepeatingElement {
         System.out.println(rep(a));
     }
 
-    //here we are using same logic as we use in linked list to find loop, once both fast and slow meet we move one at a time till they meet
+    //here we are using same logic as we use in linked list to find loop,
+    // once both fast and slow meet we move one at a time till they meet
     public static int rep(int[] a) {
         int slow = a[0], fast = a[0];
         //fast moving at twice the speed,till they meet

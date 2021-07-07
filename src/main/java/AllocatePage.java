@@ -61,7 +61,7 @@ public class AllocatePage {
             return a[0];
         int res=Integer.MAX_VALUE;
         for(int i=1;i<n;i++){
-            //since we cant make cut at 0 we are making cut at 1 and computing sum for each cute and taking max and compute the min with the temp result
+            //since we cant make cut at 0 we are making cut at 1 and computing sum for each cut and taking max and compute the min with the temp result
             res=Math.min(res,Math.max(minPageRec(a,i,k-1),sum(a,i,n-1)));
         }
         return res;

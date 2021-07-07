@@ -9,6 +9,14 @@ public class PeakElement {
 if mid element is smaller we are moving to right side of array
  else to left with each call we are elemenating half of elements
 */
+
+
+
+/*
+An element is peak if its gt its neighbour
+
+its based on property that if the left neighbour of element is gt or equal to curr there will be a peak on left or in right
+ */
 public static int findPeakElement(int[] A, int left, int right)
 {
     int n= A.length;
@@ -18,7 +26,7 @@ public static int findPeakElement(int[] A, int left, int right)
                 (mid == n-1 || A[mid + 1] <= A[mid])) {
             return mid;
         }
-        else if (mid  > 0 && A[mid - 1] > A[mid]) {
+        else if (mid  > 0 && A[mid - 1] >= A[mid]) {
             right=mid-1;
         }
         else {
